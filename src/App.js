@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+//Components
+import Banner from "./Components/Banner";
+import Main from "./Components/Main";
+import Series from "./Components/Series";
+import Game from "./Components/Game";
+import Other from "./Components/Other";
+
+//route
+import { Switch, Route, Routes } from "react-router-dom";
+
+//css
+import { app_style } from "./Css/style";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={app_style.main}>
+      <Banner />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/series" element={<Series />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/other" element={<Other />} />
+      </Routes>
     </div>
   );
 }
