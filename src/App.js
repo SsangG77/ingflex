@@ -10,11 +10,12 @@ import { Switch, Route, Routes } from "react-router-dom";
 
 //css
 import { app_style } from "./Css/style";
+import { banner_style } from "./Css/style";
 
 function App() {
   return (
     <div className="App" style={app_style.main}>
-      <Banner />
+      <Banner style={banner_style.banner} />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/series" element={<Series />} />

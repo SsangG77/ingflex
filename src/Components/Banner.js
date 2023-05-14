@@ -2,7 +2,7 @@ import logo from "../ingflex_logo.png";
 import { Link } from "react-router-dom";
 
 //css
-import { banner_style, logo_container_style, link_style, menu_btn_style } from "../Css/style";
+import { banner_style, logo_container_style } from "../Css/style";
 
 function Banner() {
   return (
@@ -13,23 +13,23 @@ function Banner() {
         </div>
         {/* 네비게이션 바 */}
         <div className="banner_link" style={{ width: "50%", marginLeft: "30px" }}>
-          <Link to="/" style={link_style}>
+          <Link to="/" style={banner_style.link_style}>
             홈
           </Link>
-          <Link to="/series" style={link_style}>
+          <Link to="/series" style={banner_style.link_style}>
             시리즈
           </Link>
-          <Link to="/game" style={link_style}>
+          <Link to="/game" style={banner_style.link_style}>
             Game
           </Link>
-          <Link to="/other" style={link_style}>
-            외부 출연 모음
+          <Link to="/other" style={banner_style.link_style}>
+            외부 출연
           </Link>
         </div>
         {/* 넷플릭스 제일 오른쪽 프로필 부분 */}
         <div style={{ width: "50%" }}>
-          <div className="notification" style={{ display: "flex" }}>
-            <button class="searchTab" tabindex="0" aria-label="검색" data-uia="search-box-launcher">
+          <div className="notification" style={{ display: "flex", justifyContent: "flex-end" }}>
+            <button class="searchTab" tabindex="0" aria-label="검색" data-uia="search-box-launcher" style={banner_style.menu_btn_style}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon" data-name="Search">
                 <path
                   fill-rule="evenodd"
@@ -42,7 +42,7 @@ function Banner() {
             <div>
               <span>키즈</span>
             </div>
-            <button class="notifications-menu" aria-haspopup="true" aria-expanded="false" aria-label="알림">
+            <button class="notifications-menu" aria-haspopup="true" aria-expanded="false" aria-label="알림" style={banner_style.menu_btn_style}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard" data-name="Notification">
                 <path
                   fill-rule="evenodd"
